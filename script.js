@@ -8,3 +8,14 @@ function getComputerChoice() {
         return "scissors";
     }
 }
+
+function getHumanChoice() {
+    let humanChoice = prompt("Choose rock, paper, or scissors only:");
+    if (humanChoice) {
+        humanChoice = humanChoice.toLowerCase();
+        if (humanChoice === "rock" || humanChoice === "paper" || humanChoice === "scissors") {
+            return humanChoice;
+        }
+    }
+    return getHumanChoice();
+}
