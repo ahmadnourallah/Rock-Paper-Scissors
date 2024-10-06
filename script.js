@@ -39,6 +39,14 @@ function playRound(humanChoice, computerChoice) {
 
 document.querySelector(".human-choice").addEventListener("click", event => {
     if (event.target.dataset.choice) {
+
+        document.querySelectorAll(".human-choice-btn").forEach(btn => {
+            if (btn !== event.target) {
+                btn.classList.remove("focus");
+            }
+        })
+
+        event.target.classList.add("focus");
         playRound(event.target.dataset.choice, getComputerChoice());
     }
 

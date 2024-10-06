@@ -38,7 +38,7 @@
     padding: 10px;
 }
 
-.human-choice > img:hover {
+.human-choice > img:hover, .focus {
     border: 1px solid grey;
 }
 
