@@ -8,13 +8,11 @@ const computerChoiceBtn = document.querySelector(".computer-choice-btn");
 
 function getComputerChoice() {
     let randomNum = Math.floor(Math.random() * 3);
-    if (randomNum === 0) {
-        return "rock";
-    } else if (randomNum === 1) {
-        return "paper";
-    } else {
-        return "scissors";
-    }
+    const choices = {0: "hand-rock-solid.svg", 1: "hand-paper-solid.svg", 2: "hand-scissors-solid.svg"};
+    let choice = choices[randomNum];
+    computerChoiceBtn.src = choice;
+
+    return choice.split("-")[1];
 }
 
 function getHumanChoice() {
