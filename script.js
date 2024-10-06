@@ -30,10 +30,8 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-// if (humanScore > computerScore) {
-//     console.log("You win the game! Your score is " + humanScore + ".");      
-// } else if (computerScore > humanScore) {
-//     console.log("The computer wins the game! Its score is " + computerScore + ".");      
-// } else {
-//     console.log("It's a tie! No one wins!");
-// }
+document.querySelector(".human-choice").addEventListener("click", event => {
+    if (event.target.dataset.choice) {
+        playRound(event.target.dataset.choice, getComputerChoice());
+    }
+});
