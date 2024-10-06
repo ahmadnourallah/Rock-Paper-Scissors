@@ -35,6 +35,12 @@ function playRound(humanChoice, computerChoice) {
         announcementDisplay.textContent = "You lose!";
         computerScoreDisplay.textContent = `Computer: ${++computerScore}`;
     }
+}
+
+document.querySelector(".human-choice").addEventListener("click", event => {
+    if (event.target.dataset.choice) {
+        playRound(event.target.dataset.choice, getComputerChoice());
+    }
 
     if (humanScore === 5) {
         announcementDisplay.textContent = "YOU WIN! Choose a hand to restart the game.";
@@ -43,11 +49,5 @@ function playRound(humanChoice, computerChoice) {
     } else if (computerScore === 5) {
         announcementDisplay.textContent = "COMPUTER WINS! Choose a hand to restart the game.";
         reloadGame();
-    }
-}
-
-document.querySelector(".human-choice").addEventListener("click", event => {
-    if (event.target.dataset.choice) {
-        playRound(event.target.dataset.choice, getComputerChoice());
     }
 });
