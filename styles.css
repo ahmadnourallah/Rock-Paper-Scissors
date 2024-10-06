@@ -7,6 +7,23 @@
     gap: 4rem;
 }
 
+.score-display {
+    display: flex;
+    width: 100%;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    justify-content: space-between;
+}
+
+.score-display .announcement {
+    font-weight: bold;
+    margin: 0;
+}
+
+.score-display .scores > span {
+    display: block;
+}
+
 .human-choice {
     display: flex;
     gap: 4rem;    
