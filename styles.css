@@ -34,8 +34,12 @@
     gap: 4rem;    
 }
 
+.human-choice > img {
+    padding: 10px;
+}
+
 .human-choice > img:hover {
-    background-color: #eeedeb;
+    border: 1px solid grey;
 }
 
 img {
