@@ -15,6 +15,13 @@ function getComputerChoice() {
     return choice.split("-")[1];
 }
 
+function reloadGame() {
+    humanScore = computerScore = 0;
+
+    humanScoreDisplay.textContent = `Human: ${humanScore}`;
+    computerScoreDisplay.textContent = `Computer: ${computerScore}`;
+    computerChoiceBtn.removeAttribute("src");
+}
 
 function playRound(humanChoice, computerChoice) {
     if (humanChoice === computerChoice) {
@@ -31,9 +38,11 @@ function playRound(humanChoice, computerChoice) {
 
     if (humanScore === 5) {
         announcementDisplay.textContent = "YOU WIN! Choose a hand to restart the game.";
-    
+        reloadGame();
+
     } else if (computerScore === 5) {
         announcementDisplay.textContent = "COMPUTER WINS! Choose a hand to restart the game.";
+        reloadGame();
     }
 }
 
