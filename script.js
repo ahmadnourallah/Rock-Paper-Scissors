@@ -1,6 +1,11 @@
 let humanScore = 0;
 let computerScore = 0;
 
+const announcementDisplay = document.querySelector(".announcement");
+const humanScoreDisplay = document.querySelector(".human-score");
+const computerScoreDisplay = document.querySelector(".computer-score");
+const computerChoiceBtn = document.querySelector(".computer-choice-btn");
+
 function getComputerChoice() {
     let randomNum = Math.floor(Math.random() * 3);
     if (randomNum === 0) {
