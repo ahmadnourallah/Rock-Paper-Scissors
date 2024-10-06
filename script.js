@@ -20,7 +20,7 @@ function reloadGame() {
 
     humanScoreDisplay.textContent = `Human: ${humanScore}`;
     computerScoreDisplay.textContent = `Computer: ${computerScore}`;
-    computerChoiceBtn.removeAttribute("src");
+    computerChoiceBtn.src = "question-solid.svg";
 }
 
 function playRound(humanChoice, computerChoice) {
