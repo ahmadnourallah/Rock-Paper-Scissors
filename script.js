@@ -1,6 +1,5 @@
 let humanScore = 0;
 let computerScore = 0;
-let round = 1;
 
 const announcementDisplay = document.querySelector(".announcement");
 const humanScoreDisplay = document.querySelector(".human-score");
