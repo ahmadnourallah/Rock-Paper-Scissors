@@ -28,6 +28,13 @@ function playRound(humanChoice, computerChoice) {
         announcementDisplay.textContent = "You lose!";
         computerScoreDisplay.textContent = `Computer: ${++computerScore}`;
     }
+
+    if (humanScore === 5) {
+        announcementDisplay.textContent = "YOU WIN! Choose a hand to restart the game.";
+    
+    } else if (computerScore === 5) {
+        announcementDisplay.textContent = "COMPUTER WINS! Choose a hand to restart the game.";
+    }
 }
 
 document.querySelector(".human-choice").addEventListener("click", event => {
