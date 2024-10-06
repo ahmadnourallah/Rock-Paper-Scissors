@@ -34,6 +34,10 @@
     gap: 4rem;    
 }
 
+.human-choice > img:hover {
+    background-color: #eeedeb;
+}
+
 img {
     height: 150px;
     width: 150px;
