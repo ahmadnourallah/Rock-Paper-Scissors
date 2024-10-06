@@ -39,6 +39,8 @@ function playRound(humanChoice, computerChoice) {
 document.querySelector(".human-choice").addEventListener("click", event => {
     if (event.target.dataset.choice) {
 
+        if (humanScore === 5 || computerScore === 5) { reloadGame(); }
+
         document.querySelectorAll(".human-choice-btn").forEach(btn => {
             if (btn !== event.target) {
                 btn.classList.remove("focus");
@@ -51,10 +53,8 @@ document.querySelector(".human-choice").addEventListener("click", event => {
 
     if (humanScore === 5) {
         announcementDisplay.textContent = "YOU WIN! Choose a hand to restart the game.";
-        reloadGame();
 
     } else if (computerScore === 5) {
         announcementDisplay.textContent = "COMPUTER WINS! Choose a hand to restart the game.";
-        reloadGame();
     }
 });
