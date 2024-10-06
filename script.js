@@ -15,18 +15,6 @@ function getComputerChoice() {
     return choice.split("-")[1];
 }
 
-function getHumanChoice() {
-    let humanChoice = prompt("Choose rock, paper, or scissors only:");
-    if (humanChoice) {
-        humanChoice = humanChoice.toLowerCase();
-        if (humanChoice === "rock" || humanChoice === "paper" || humanChoice === "scissors") {
-            return humanChoice;
-        }
-    }
-    return getHumanChoice();
-}
-
-
 function playGame() {
     let humanScore = 0;
     let computerScore = 0;
